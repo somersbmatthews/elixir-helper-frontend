@@ -4,9 +4,14 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    codemirror: {
+      themes: ['solarized', 'twilight'],
+      modes:['elixir']
+    }
     // Add options here
   });
 
+  app.import('node_modules/codemirror/mode/elixir/elixir.js')
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
