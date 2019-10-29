@@ -22,10 +22,12 @@ script: echo "This should be running tests for continuous integration"
 after_success:
 - if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then ./deploy.sh; fi
 language: node_js
+
 node_js:
   - "8"
 
 sudo: false
+
 dist: trusty
 
 addons:
