@@ -4,11 +4,16 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    // Add options here
     codemirror: {
       themes: ['solarized', 'twilight'],
       modes:['elixir']
+    },
+
+    'ember-bootstrap': {
+      'bootstrapVersion': 4,
+      'importBootstrapCSS': true
     }
-    // Add options here
   });
 
  
